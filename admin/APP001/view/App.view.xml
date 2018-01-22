@@ -1,0 +1,15 @@
+<mvc:View controllerName="CryptoCap.admin.APP001.controller.App" displayBlock="true"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:u="sap.ui.unified"
+	xmlns="sap.m"
+	xmlns:tnt="sap.tnt">
+	<SplitApp id="idAppControlAPP001">
+		<masterPages>
+			<mvc:XMLView viewName="CryptoCap.admin.APP001.view.Master" id="idViewMasterAPP001" />
+		</masterPages>
+		<detailPages>
+			<mvc:XMLView viewName="CryptoCap.admin.APP001.view.Detail" id="idViewDetailAPP001" />
+			<mvc:XMLView viewName="CryptoCap.admin.APP001.view.DetailNoObjectsAvailable" id="idViewEmptyAPP001" />
+		</detailPages>
+	</SplitApp>
+</mvc:View>

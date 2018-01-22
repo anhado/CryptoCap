@@ -1,0 +1,13 @@
+<mvc:View
+	controllerName="CryptoCap.admin.APP001.controller.DetailNoObjectsAvailable"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m"
+	xmlns:semantic="sap.m.semantic">
+	<MessagePage
+		id="page"
+		text="{i18n>mensagemObjectoIndisponivelTexto}"
+		icon="{sap-icon://product}"
+		description=""
+		showNavButton="{device>/system/phone}"
+		navButtonPress="onNavBack"></MessagePage>
+</mvc:View>

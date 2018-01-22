@@ -1,0 +1,25 @@
+<mvc:View
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:semantic="sap.m.semantic"
+	xmlns:layout="sap.ui.layout"
+	xmlns:viz="sap.viz.ui5.controls"
+	xmlns:viz.feeds="sap.viz.ui5.controls.common.feeds"
+	xmlns:viz.data="sap.viz.ui5.data"
+ controllerName="CryptoCap.admin.BASE.controller.Detail">
+	<Page title="BASE" 
+		id="page" 
+		navButtonPress="onNavBack" 
+		showNavButton="{device>/system/phone}" 
+		busy="{detailView>/busy}" 
+		busyIndicatorDelay="{detailView>/delay}">
+		<content></content>
+		<footer>
+			<Bar>
+				<contentLeft></contentLeft>
+				<contentMiddle></contentMiddle>
+				<contentRight></contentRight>
+			</Bar>
+		</footer>
+	</Page>
+</mvc:View>

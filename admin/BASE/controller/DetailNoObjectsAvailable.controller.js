@@ -1,0 +1,11 @@
+/*global history */
+sap.ui.define([
+		"sap/ui/core/mvc/Controller"
+		], function (Controller) {
+		"use strict";
+		return Controller.extend("CryptoCap.admin.BASE.controller.DetailNoObjectsAvailable", {
+
+		});
+
+	}
+);

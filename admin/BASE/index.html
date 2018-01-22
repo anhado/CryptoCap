@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html>
+
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta charset="UTF-8">
+        <link rel="shortcut icon" href="../../assets/images/bits.png" type="image/x-icon">
+		<title>Aplicações</title>
+        
+		<script id="sap-ui-bootstrap"
+			src="/UI5/resources/sap-ui-core.js"
+			data-sap-ui-libs="sap.m"
+			data-sap-ui-theme="sap_bluecrystal"
+			data-sap-ui-compatVersion="edge"
+			data-sap-ui-resourceroots='{"CryptoCap.admin.BASE": ""}'>
+		</script>
+
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<script src="../../UTIL/jquery.cookie.js" > </script>
+		<script src="../../js/config.js" > </script>
+		<script>
+			sap.ui.getCore().attachInit(function() {
+				
+				new sap.ui.core.ComponentContainer({
+					height : "100%",
+					name : "CryptoCap.admin.BASE"
+				}).placeAt("content");
+				
+			});
+			
+		</script>
+	</head>
+
+	<body class="sapUiBody" role="application" >
+		<div id="content"></div>
+	</body>
+
+</html>

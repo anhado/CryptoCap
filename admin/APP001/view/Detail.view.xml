@@ -1,0 +1,85 @@
+<mvc:View
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:semantic="sap.m.semantic"
+	xmlns:layout="sap.ui.layout"
+	xmlns:viz="sap.viz.ui5.controls"
+	xmlns:f="sap.ui.layout.form"
+	xmlns:viz.feeds="sap.viz.ui5.controls.common.feeds"
+	xmlns:viz.data="sap.viz.ui5.data"
+	xmlns:core="sap.ui.core" 
+ controllerName="CryptoCap.admin.APP001.controller.Detail">
+	<Page title="Integration" 
+		id="page" 
+		navButtonPress="onNavBack" 
+		showNavButton="{device>/system/phone}" 
+		busy="{detailView>/busy}" 
+		busyIndicatorDelay="{detailView>/delay}">
+		<content>
+			<Panel expandable="true" expanded="true" width="auto" class="sapUiResponsiveMargin">
+				<headerToolbar>
+					<Toolbar height="3rem">
+						<Title text="Url configuration" />
+						<ToolbarSpacer />
+					</Toolbar>
+				</headerToolbar>
+				<content>
+					<f:SimpleForm id="SimpleFormToolbar1"
+                            			editable="true"
+                            			layout="ResponsiveGridLayout"
+                            			labelSpanXL="4"
+                            			labelSpanL="3"
+                            			labelSpanM="4"
+                            			labelSpanS="12"
+                            			adjustLabelSpan="false"
+                            			emptySpanXL="0"
+                            			emptySpanL="4"
+                            			emptySpanM="0"
+                            			emptySpanS="0"
+                            			columnsXL="2"
+                            			columnsL="1"
+                            			columnsM="1"
+                            			singleContainerFullSize="false" >
+						<f:content>
+							<Label text="Api Name"/>
+							<Input value="{/Details/APINAME}"/>
+							<Label text="URL"/>
+							<Input value="{/Details/URL}"/>
+							<Label text="URL Currency(GET)"/>
+							<Input value="{/Details/URLCURRENCY}"/>
+							<Label text="URL Market(GET)"/>
+							<Input value="{/Details/URLMARKET}"/>
+							<Label text="URL Orders(GET)"/>
+							<Input value="{/Details/URLORDERS}"/>
+						</f:content>
+					</f:SimpleForm>
+				</content>
+			</Panel>
+			<Panel expandable="true" expanded="true" width="auto" class="sapUiResponsiveMargin">
+				<headerToolbar>
+					<Toolbar height="3rem">
+						<Title text="Currency Fields Mapping" />
+						<ToolbarSpacer />
+					</Toolbar>
+				</headerToolbar>
+				<content>
+					<VBox class="sapUiTinyMargin">
+						<Input width="100%" height="400" id="idUser"  text="" />
+						<VBox class="sapUiTinyMargin">
+							<Label text=" "/>
+							<Button id="idTestar" text="Test" press="handleTestarButtonPress" />
+						</VBox>
+						<Input width="100%" height="400" id="idResultado"  text="" />
+					</VBox>
+				</content>
+			</Panel>
+		</content>
+		<footer>
+			<Bar>
+				<contentLeft></contentLeft>
+				<contentMiddle></contentMiddle>
+				<contentRight><Button id="idSave" type="Accept" icon="sap-icon://save" text="Save" press="handleSaveButtonPress" /></contentRight>
+			</Bar>
+		</footer>
+	</Page>
+</mvc:View>

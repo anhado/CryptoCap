@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html>
+
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta charset="UTF-8">
+        <link rel="shortcut icon" href="../../assets/images/bits.png" type="image/x-icon">
+		<title>Integration APIs</title>
+        
+		<script id="sap-ui-bootstrap"
+			src="/UI5/resources/sap-ui-core.js"
+			data-sap-ui-libs="sap.m"
+			data-sap-ui-theme="sap_bluecrystal"
+			data-sap-ui-compatVersion="edge"
+			data-sap-ui-resourceroots='{"CryptoCap.admin.APP001": ""}'>
+		</script>
+
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<script src="../../UTIL/jquery.cookie.js" > </script>
+		<script src="../../UTIL/config.js" > </script>
+    	<script src="../../UTIL/gibberish-aes-1.0.0.min.js" > </script>
+    	
+   		<script src="../../js/ace/src-min-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
+        
+        <script src="../../js/ace/src-min-noconflict/ext-language_tools.js" type="text/javascript" charset="utf-8"></script> 
+        <script src="../../js/ace/src-min-noconflict/ext-beautify.js" type="text/javascript" charset="utf-8"></script> 
+        
+        <script src="../../js/jsoneditor/jsoneditor.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="../../js/jsoneditor/jsoneditor.css">
+        
+		<script>
+			sap.ui.getCore().attachInit(function() {
+				
+				new sap.ui.core.ComponentContainer({
+					height : "100%",
+					name : "CryptoCap.admin.APP001"
+				}).placeAt("content");
+				
+			});
+			
+		</script>
+	</head>
+
+	<body class="sapUiBody" role="application" >
+		<div id="content"></div>
+	</body>
+
+</html>

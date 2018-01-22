@@ -1,0 +1,5 @@
+{
+	"authentication" : null,
+	"anonymous_connection": "CryptoCap::AnonConn", 
+	"exposed": true
+}

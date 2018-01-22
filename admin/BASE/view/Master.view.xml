@@ -1,0 +1,44 @@
+<mvc:View
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:core="sap.ui.core"
+	xmlns="sap.m"
+	xmlns:semantic="sap.m.semantic"
+	controllerName="CryptoCap.admin.BASE.controller.Master">
+	<semantic:MasterPage id="masterPage" 
+		navButtonPress="onNavBack" 
+		showNavButton="false">
+		<semantic:subHeader>
+			<Bar id="headerBar">
+				<contentMiddle>
+					<SearchField id="searchField" 
+						showRefreshButton="{= !${device>/support/touch} }" 
+						tooltip="{i18n>masterSearchTooltip}" 
+						width="100%"
+						liveChange="handleSearch" />
+				</contentMiddle>
+			</Bar>
+		</semantic:subHeader>
+		<semantic:content>
+			<List id="masterList" 
+				items="{/MasterData}" 
+				busyIndicatorDelay="{masterView>/delay}" 
+				noDataText="{masterView>/noDataText}"
+				mode="SingleSelectMaster" 
+				growing="true" 
+				growingScrollToLoad="true"
+				updateFinished="onUpdateFinished" 
+				selectionChange="onSelectionChange">
+				<items>
+					<ObjectListItem title="{U_data}" 
+						intro="{U_NumOT}" >
+						<firstStatus></firstStatus>
+						<attributes>
+							<ObjectAttribute text="{NameUser}" />
+						</attributes>
+					</ObjectListItem>
+				</items>
+			</List>
+		</semantic:content>
+		<semantic:group></semantic:group>
+	</semantic:MasterPage>
+</mvc:View>
